@@ -25,7 +25,7 @@ function hook_chat() {
             elt=$(elt);
             elt.css("max-height", "500px");
             elt.css("max-width", "600px");
-        }
+        });
 
         var emoticons = document.createElement("div");
         emoticons.id = "emoticons";
