@@ -28,8 +28,17 @@ function hook_chat() {
         }
 
         var emoticons = document.createElement("div");
+        emoticons.id = "emoticons";
         $(emoticons).css("display:none");
         (document.head || document.body || document.documentElement).appendChild(emoticons);
+
+        $(emoticons).html("<a href='#' onclick='append(\"(awyeah)\")'><img src=\"http://hipchat.com/img/emoticons/awyea.png\"></a>"); 
+
+        if ($("#emoticon-toggle").length == 0) {
+
+            var emoticon_toggle = '<td width="1%" id="emoticon-toggle"><a href="#"><img src="http://hipchat.com/img/emoticons/awyea.png"></a></td>';
+            $("#send_message_button").parent().before(emoticon_toggle);
+        }
 
         old_scroll_chat.apply(chat, arguments);
     }
