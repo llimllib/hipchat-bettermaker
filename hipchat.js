@@ -20,7 +20,7 @@ function hook_chat() {
             elt.attr("width", "40");
         });
 
-        /* double the size of images */
+        /* double the max size of images not already doubled */
         $("img[onload]:not([style])").each(function(i,elt) {
             elt=$(elt);
             elt.css("max-height", "500px");
