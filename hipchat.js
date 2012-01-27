@@ -21,8 +21,11 @@ function hook_chat() {
         });
 
         /* double the size of images */
-        $("img[onload]:not([style])").css("max-height", "500px")
-        $("img[onload]:not([style])").css("max-width", "600px")
+        $("img[onload]:not([style])").each(function(i,elt) {
+            elt=$(elt);
+            elt.css("max-height", "500px");
+            elt.css("max-width", "600px");
+        }
 
         var emoticons = document.createElement("div");
         $(emoticons).css("display:none");
