@@ -10,7 +10,7 @@ function hook_chat() {
     chat.scroll_chat = function() {
         console.log("scroll hook called");
 
-        $("img[name='emoticon']").each(function(i,elt) {
+        $("img[name='emoticon']:not([title])").each(function(i,elt) {
             elt=$(elt);
             /* add a title attribute to emoticons */
             elt.attr("title", elt.attr("alt"));
