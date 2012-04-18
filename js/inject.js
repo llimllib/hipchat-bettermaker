@@ -7,6 +7,7 @@ function injectJs(link) {
 
 $(document).ready(function() {
     console.log("running inject");
-    /*                                              prevent caching */
+
+    /* the random number prevent caching */
     injectJs(chrome.extension.getURL("js/hipchat.js") + "?" + Math.random());
 });
