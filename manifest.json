@@ -9,8 +9,8 @@
   },
   "content_scripts": [{
       "matches": ["https://*.hipchat.com/*"],
-      "css": ["style.css"],
-      "js": ["jquery.js", "inject.js"]
+      "css": ["css/style.css"],
+      "js": ["js/jquery.js", "js/inject.js"]
   }],
   "permissions": [
     "https://*.hipchat.com"
