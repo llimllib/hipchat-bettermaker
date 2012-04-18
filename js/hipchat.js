@@ -11,6 +11,10 @@ function hide_emoticons() {
 }
 
 function create_emoticons() {
+    if ($("#emoticon-toggle").length == 0) {
+        var emoticon_toggle = '<td width="1%" id="emoticon-toggle"><a href="#" onclick=""><img src="http://hipchat.com/img/emoticons/awyea.png"></a></td>'
+        $("#send_message_button").parent().before(emoticon_toggle);
+    }
 }
 
 function hook_chat() {
@@ -37,6 +41,8 @@ function hook_chat() {
 
         old_scroll_chat.apply(chat, arguments);
     }
+
+    create_emoticons();
 }
 
 hipchat_bettermaker_maxwait = 0;
