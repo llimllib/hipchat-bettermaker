@@ -8,5 +8,5 @@ function injectJs(link) {
 $(document).ready(function() {
     console.log("running inject");
     /*                                              prevent caching */
-    injectJs(chrome.extension.getURL("hipchat.js") + "?" + Math.random());
+    injectJs(chrome.extension.getURL("js/hipchat.js") + "?" + Math.random());
 });
